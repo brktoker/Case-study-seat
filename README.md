@@ -1,5 +1,10 @@
 # case-study-seat
 
+## Project description
+```
+This project is create your own vehicle for 'SEAT' brand.
+```
+
 ## Project setup
 ```
 npm install
