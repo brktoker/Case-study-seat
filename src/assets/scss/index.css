@@ -88,7 +88,28 @@ body {
   justify-content: space-between;
   display: flex;
 }
+.totalPopup .detailCar .badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 64px;
+  height: 25px;
+  background-color: #000;
+  border-radius: 15.5px;
+  font-family: "Qanelas";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 9px;
+  line-height: 12px;
+  top: -11px;
+  left: 45px;
+  text-align: center;
+  letter-spacing: 7px;
+  color: #fff;
+}
 .totalPopup .detailCar .car {
+  position: relative;
   padding-top: 22px;
   padding-bottom: 23px;
   padding-left: 27px;
@@ -167,6 +188,56 @@ body {
   content: "s";
   color: transparent;
   background-image: url(../img/next.svg);
+}
+
+.card {
+  height: 283px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgba(151, 151, 151, 0.1411764706);
+  border-radius: 11px;
+}
+.card .checked {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  border: 1px solid rgba(151, 151, 151, 0.1960784314);
+}
+.card .card-title {
+  margin-top: 50px;
+  font-family: "Qanelas";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.992366px;
+  text-transform: uppercase;
+  color: #0f0f0f;
+}
+.card .card-price {
+  font-family: "Qanelas";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #1c1c1c;
+}
+.card.active {
+  background-color: #292929;
+}
+.card.active .checked {
+  background-color: #353535 !important;
+}
+.card.active .card-title,
+.card.active .card-price {
+  color: #fff !important;
 }
 
 .car-summary {
@@ -365,6 +436,71 @@ body {
   border: 1px solid #000000;
   border-radius: 253.5px;
   z-index: -1;
+}
+
+.colors {
+  height: 200px;
+  display: flex;
+  margin-top: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.colors li {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  margin-right: 14px;
+  cursor: pointer;
+}
+.colors li.active {
+  position: relative;
+  padding: 5px;
+}
+.colors li.active::after {
+  display: block;
+  content: "s";
+  color: transparent;
+  position: absolute;
+  top: -5px;
+  border-radius: 100%;
+  left: -5px;
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(0, 0, 0, 0.3607843137);
+}
+.colors li.active .checked {
+  position: absolute;
+  top: -13px;
+  left: -13px;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  display: flex;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #fff;
+}
+.colors li.active .checked img {
+  width: 7.81px;
+}
+.colors li.red {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  background: #b40f14;
+}
+.colors li.black {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  background: #1c1c1c;
+}
+.colors li.grey {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  background: #c8c8c8;
 }
 
 .colorPageTopText {

@@ -1,13 +1,13 @@
 <template>
     <div class="circleArea container">
         <div class="row">
-            <div class="col-md-6 p-0 circleCar active big">
+            <div class="col-md-6 p-0 circleCar active big animate__animated animate__fadeInLeft">
                 <div class="carName">{{selectedCar.model.toUpperCase()}}</div>
                 <div class="carImage">
                     <img width="440.64px" height="200.16px" style="width: 440.64px !important; height: 200.16px !important" :src="require(`../assets/img/${selectedCar.model}.png`)" />
                 </div>
             </div>
-            <div class="col-md-6 p-0 d-flex flex-column justify-content-center">
+            <div class="col-md-6 p-0 d-flex flex-column justify-content-center animate__animated animate__fadeInRight">
                 <div class="car-summary">
                     <div class="feature">MODEL</div>
                     <div class="featureDescription">{{selectedCar.model + ' '}} 1.3 Ecotech DSG</div>

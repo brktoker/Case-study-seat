@@ -2,11 +2,11 @@
   <div class="circleArea container">
         <div class="row">
             <div
-            class="col-md-6 p-0 circleCar"
+            class="col-md-6 p-0 circleCar animate__animated animate__fadeInDown"
             v-for="model in newModels"
             :class="{active : selectedCar.model === model.name}"
             >
-                <div class="checked"><img src="@/assets/img/checked.svg" width="13.02px" height="9.02px" style="width: 13.02px !important;height: 9.02px !important" /></div>
+                <div class="checked" style="right:120px !important"><img src="@/assets/img/checked.svg" width="13.02px" height="9.02px" style="width: 13.02px !important;height: 9.02px !important" /></div>
                 <div class="carName">{{model.name.toUpperCase()}}</div>
                 <div class="carImage">
                     <img width="440.64px" height="200.16px" style="width: 440.64px !important; height: 200.16px !important" :src="require(`../assets/img/${model.name}.png`)"  />

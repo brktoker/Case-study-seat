@@ -90,7 +90,28 @@ $menu: rgba(#0f0f0f, 0.19);
         flex-direction: row;
         justify-content: space-between;
         display: flex;
+        .badge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 64px;
+            height: 25px;
+            background-color: #000;
+            border-radius: 15.5px;
+            font-family: "Qanelas";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 9px;
+            line-height: 12px;
+            top: -11px;
+            left: 45px;
+            text-align: center;
+            letter-spacing: 7px;
+            color: #fff;
+        }
         .car {
+            position: relative;
             padding-top: 22px;
             padding-bottom: 23px;
             padding-left: 27px;
@@ -175,6 +196,60 @@ $menu: rgba(#0f0f0f, 0.19);
                 color: transparent;
                 background-image: url(../img/next.svg);
             }
+        }
+    }
+}
+
+.card {
+    height: 283px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #97979724;
+    border-radius: 11px;
+    .checked {
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+        height: 33px;
+        border-radius: 100%;
+        border: 1px solid #97979732;
+    }
+    .card-title {
+        margin-top: 50px;
+        font-family: "Qanelas";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 0.992366px;
+        text-transform: uppercase;
+
+        color: #0f0f0f;
+    }
+
+    .card-price {
+        font-family: "Qanelas";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+
+        color: #1c1c1c;
+    }
+
+    &.active {
+        background-color: #292929;
+        .checked {
+            background-color: #353535 !important;
+        }
+        .card-title,
+        .card-price {
+            color: #fff !important;
         }
     }
 }
@@ -393,6 +468,71 @@ $menu: rgba(#0f0f0f, 0.19);
         border: 1px solid #000000;
         border-radius: 253.5px;
         z-index: -1;
+    }
+}
+
+.colors {
+    height: 200px;
+    display: flex;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    li {
+        display: inline-block;
+        position: relative;
+        list-style: none;
+        margin-right: 14px;
+        cursor: pointer;
+        &.active {
+            position: relative;
+            padding: 5px;
+            &::after {
+                display: block;
+                content: "s";
+                color: transparent;
+                position: absolute;
+                top: -5px;
+                border-radius: 100%;
+                left: -5px;
+                width: 43px;
+                height: 43px;
+                border: 1px solid #0000005c;
+            }
+            .checked {
+                position: absolute;
+                top: -13px;
+                left: -13px;
+                width: 30px;
+                height: 30px;
+                background-color: #000;
+                display: flex;
+                border-radius: 100%;
+                justify-content: center;
+                align-items: center;
+                border: 4px solid #fff;
+                img {
+                    width: 7.81px;
+                }
+            }
+        }
+        &.red {
+            width: 33px;
+            height: 33px;
+            border-radius: 100%;
+            background: #b40f14;
+        }
+        &.black {
+            width: 33px;
+            height: 33px;
+            border-radius: 100%;
+            background: #1c1c1c;
+        }
+        &.grey {
+            width: 33px;
+            height: 33px;
+            border-radius: 100%;
+            background: #c8c8c8;
+        }
     }
 }
 

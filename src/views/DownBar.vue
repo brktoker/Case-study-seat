@@ -1,7 +1,8 @@
 <template>
-    <div class="totalPopup" style="margin-top: 10vh;position: inherit;margin-bottom: 5vh;">
+    <div class="totalPopup animate__animated animate__fadeInUp" style="margin-top: 50px;position: inherit;margin-bottom: 5vh;">
         <div class="detailCar">
             <div class="car">
+                <div class="badge">NEW</div>
                 <img :src="require(`../assets/img/${selectedCar}.png`)" />
                 <div class="description">
                     <span>Total</span>

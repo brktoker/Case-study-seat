@@ -15,7 +15,11 @@ export default createStore({
       { name: 'Ibiza', price: 193500, currency: 'TL' },
       { name: 'Arona', price: 300000, currency: 'TL' }
     ],
-    colors: ['Rose Red', 'Black', 'Indigo Grey'],
+    colors: [
+      {name: 'Red Rose', subName: 'red'},
+      {name: 'Black', subName: 'black'},
+      {name: 'Indigo Grey', subName: 'grey'}
+    ],
     accessories: [
       { id: 1, title: 'SEAT FREE SYNC PACK EASY JET', price: 7500, currency: 'TL' },
       { id: 2, title: 'Maintenance Program Upgrade', price: 1250, currency: 'TL' },

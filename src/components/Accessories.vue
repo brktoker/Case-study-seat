@@ -1,17 +1,29 @@
 <template>
-<div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="card text-white bg-dark mb-3 selected"
-            :style="selectedAccessories.find(e => e.id === accessory.id) ? 'box-shadow: 20px 20px 20px 10px black;' : ''"
-            style="max-width: 18rem;margin:10px;"
-            v-for="accessory in newAccessories">
-            <div class="card-body" @click="selectAccessories(accessory)">
-                <h5 class="card-title">{{accessory.title}}</h5>
-                <p class="card-text">{{accessory.price}} {{" " + accessory.currency }}</p>
-            </div>
-        </div>
-    </div>
-</div>
+  <div class="circleArea container">
+      <div class="row">
+          <div class="col-12 text-center"><span class="colorPageTopText">Seçtiğin araca ait özellikler,<br> konforun
+                  ve yaşam stilini belirler.</span>
+          </div>
+          <div class="row scroll-bar animate__animated animate__fadeIn">
+              <div class="col-12 col-md-4 p-4"
+                v-for="accessory in newAccessories"
+                >
+                  <div
+                  class="animate__animated animate__fadeIn"
+                  :class="[selectedAccessories.find(e => e.id === accessory.id) ? 'card active' : 'card']"
+                  @click="selectAccessories(accessory)"
+                  style="cursor: pointer;"
+                  >
+                      <span class="card-title">{{accessory.title}}</span>
+                      <span class="card-price">{{accessory.price}} {{" " + accessory.currency }}</span>
+                      <div :class="[selectedAccessories.find(e => e.id === accessory.id) ? 'checked' : '']">
+                      <img src="@/assets/img/checked.svg" width="13.02px" height="9.02px" style="width: 13.02px; height: 9.02px;" />
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
 </template>
 
 <script>
@@ -54,7 +66,48 @@ export default {
 </script>
 
 <style>
-.selected:hover {
-    box-shadow: 20px 20px 20px 10px black;
+.scroll-bar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  position: absolute;
+  width: 5px;
+  height: 464px;
+  left: 1217px;
+  top: 374px;
+
+  background: #D8D8D8;
+  mix-blend-mode: normal;
+  opacity: 0.57;
+}
+
+.scroll-bar::-webkit-scrollbar {
+  position: absolute;
+  width: 5px;
+  height: 464px;
+  left: 1217px;
+  top: 374px;
+
+  background: #D8D8D8;
+  mix-blend-mode: normal;
+  opacity: 0.57;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  position: absolute;
+  width: 5px;
+  height: 49px;
+  left: 1217px;
+  top: 404px;
+
+  background: #575757;
+  border-radius: 10px;
+}
+
+.scroll-bar {
+  margin-left:auto;
+  margin-right:auto;
+  height: 300px;
+  width: 849px;
+  overflow-y: scroll;
+  margin-bottom: 25px;
 }
 </style>
